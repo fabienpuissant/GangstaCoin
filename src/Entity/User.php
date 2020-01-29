@@ -148,6 +148,11 @@ class User implements UserInterface, Serializable
             $this->Mdp) = unserialize($serialized, ["allowed_classes" => false]);
     }
 
+    public function getPassword()
+    {
+        return $this->Mdp;
+    }
+
     private function initConfirmationToken() {
             $length = 10;
             $alphabet = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";

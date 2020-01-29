@@ -9,10 +9,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class SecurityController extends AbstractController
 {
     /**
-     *  @Route("/login", name = "login" methods="GET|POST")
+     *  @Route("/login", name = "login", methods="GET|POST")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function login() {
-        return $this->render('login.html.twig');
+        return $this->render('pages/login.html.twig');
     }
 }

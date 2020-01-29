@@ -19,7 +19,7 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("/register", name = "register" methods="GET|POST")
+     * @Route("/register", name = "register", methods="GET|POST")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index(Request $request) 
