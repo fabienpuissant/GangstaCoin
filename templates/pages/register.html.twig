@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Sign in' %}
+
+{% block body %}
+
+    {% if err == 1 %}
+        <div class = "aler alert-danger">
+			<p class = "alert">Email or Username already used. The password must be longer than 6 caracters with one capital letter</p>
+	    </div>
+    {% endif %}
+
+    {% if err == 0 %}
+        <div class = "aler alert-success">
+			<p class = "alert">Success check your emails to activate your account</p>
+	    </div>
+    {% endif %}
+
+    <div class = "container mt-4">
+
+        <h1>Sign in</h1>
+
+        <div class = "container mt-4">    
+            {{ form_start(form) }}
+                {{ form_rest(form) }}
+                <button class = "btn btn-primary">Sign in</button>
+            {{ form_end(form) }}
+        </div>
+
+    </div>
+{% endblock %}
